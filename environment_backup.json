@@ -1,0 +1,63 @@
+{
+  "system_info": {
+    "os": "Linux kaustubh-ubuntu 6.11.0-26-generic",
+    "architecture": "x86_64",
+    "python_version": "3.10.16",
+    "comfyui_path": "/home/kaustubh/Documents/GitHub/ComfyUI"
+  },
+  "hardware": {
+    "gpu": {
+      "available": true,
+      "count": 1,
+      "name": "NVIDIA GeForce RTX 3070"
+    }
+  },
+  "python_packages": {
+    "torch": "2.5.1",
+    "torchvision": "0.20.1",
+    "torchaudio": "2.5.1",
+    "torchsde": "0.2.6",
+    "comfyui_frontend_package": "1.19.9",
+    "comfyui_workflow_templates": "0.1.14"
+  },
+  "models": {
+    "paths": {
+      "checkpoints": "/home/kaustubh/Documents/GitHub/ComfyUI/models/checkpoints",
+      "loras": "/home/kaustubh/Documents/GitHub/ComfyUI/models/loras",
+      "vae": "/home/kaustubh/Documents/GitHub/ComfyUI/models/vae",
+      "controlnet": "/home/kaustubh/Documents/GitHub/ComfyUI/models/controlnet",
+      "upscale_models": "/home/kaustubh/Documents/GitHub/ComfyUI/models/upscale_models",
+      "embeddings": "/home/kaustubh/Documents/GitHub/ComfyUI/models/embeddings",
+      "text_encoders": "/home/kaustubh/Documents/GitHub/ComfyUI/models/text_encoders"
+    },
+    "detected": {
+      "dreamshaper_8.safetensors": "models/checkpoints/dreamshaper_8.safetensors",
+      "isnet-general-use.onnx": "models/rembg/isnet-general-use.onnx",
+      "v2-inference-v.yaml": "models/configs/v2-inference-v.yaml",
+      "v2-inference-v_fp32.yaml": "models/configs/v2-inference-v_fp32.yaml"
+    }
+  },
+  "custom_nodes": {
+    "installed": [
+      "ComfyUI-Flowty-TripoSR",
+      "was-node-suite-comfyui",
+      "websocket_image_save.py"
+    ],
+    "repositories": {
+      "ComfyUI-Flowty-TripoSR": "https://github.com/Flowty/ComfyUI-Flowty-TripoSR",
+      "was-node-suite-comfyui": "https://github.com/WASasquatch/was-node-suite-comfyui"
+    }
+  },
+  "workflows": {
+    "saved": [
+      "user/default/workflows/prompt to 3d.json",
+      "user/default/workflows/workflow_simple.json"
+    ]
+  },
+  "settings": {
+    "user_settings_file": "user/default/comfy.settings.json"
+  },
+  "date_captured": "2023-07-28",
+  "timestamp": "2023-07-28T15:30:00Z",
+  "backup_version": "1.0"
+} 

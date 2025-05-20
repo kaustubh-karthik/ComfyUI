@@ -1,0 +1,59 @@
+# ComfyUI Models Tracking
+# This file lists all models used in your ComfyUI environment
+
+models:
+  checkpoints:
+    # Add your checkpoints here
+    # format: - name: "model_name.safetensors"
+    #         description: "What this model does best"
+    - name: "v1-5-pruned-emaonly.safetensors"
+      description: "Stable Diffusion 1.5 base model"
+    - name: "dreamshaper_8.safetensors"
+      description: "DreamShaper 8 - High quality general purpose model with good detail and consistent outputs"
+  
+  loras:
+    # Add your LoRAs here
+    # format: - name: "lora_name.safetensors" 
+    #         description: "What this LoRA does"
+  
+  controlnet:
+    # Add your ControlNets here
+    # format: - name: "controlnet_name.safetensors"
+    #         description: "What this ControlNet does"
+  
+  vae:
+    # Add your VAE models here
+    # format: - name: "vae_name.safetensors"
+    #         description: "What this VAE does"
+
+  upscale_models:
+    # Add your upscalers here
+    # format: - name: "upscaler_name.safetensors"
+    #         description: "What this upscaler does"
+  
+  text_encoders:
+    # Add your custom text encoders here
+    # format: - name: "encoder_name"
+    #         description: "What this encoder does"
+
+  embeddings:
+    # Add your embeddings/textual inversions here
+    # format: - name: "embedding_name.pt"
+    #         description: "What this embedding represents"
+  
+  # Add any other model types you use
+  
+  rembg:
+    - name: "isnet-general-use.onnx"
+      description: "Background removal model for general use"
+
+# Add download sources for models (for reproducibility)
+model_sources:
+  # format: model_name: "URL where it can be downloaded"
+  # example: v1-5-pruned-emaonly.safetensors: "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors"
+  dreamshaper_8.safetensors: "https://huggingface.co/Lykon/DreamShaper/resolve/main/DreamShaper_8_pruned.safetensors"
+  isnet-general-use.onnx: "https://github.com/danielgatis/rembg/releases/download/v0.0.0/isnet-general-use.onnx"
+
+notes:
+  # Any other notes about your models 
+  - DreamShaper 8 works great for realistic and stylized images with good facial details 

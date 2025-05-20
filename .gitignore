@@ -24,3 +24,15 @@ web_custom_versions/
 openapi.yaml
 filtered-openapi.yaml
 uv.lock
+
+# Keep user tracking files
+!user_models.yaml
+!user_config.yaml
+!environment_backup.json
+
+# Keep workflow files in the user directory
+!/user/
+/user/*
+!/user/default/
+/user/default/*
+!/user/default/workflows/

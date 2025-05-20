@@ -1,0 +1,69 @@
+# ComfyUI Configuration Tracking
+# This file tracks important configuration data for your ComfyUI environment
+
+# Custom Nodes
+custom_nodes:
+  # List your installed custom nodes
+  - name: "ComfyUI-Flowty-TripoSR"
+    description: "TripoSR 3D modeling nodes for generating 3D assets from 2D images"
+    repository: "https://github.com/Flowty/ComfyUI-Flowty-TripoSR"
+    version: "latest"
+    features:
+      - "3D model generation from images"
+      - "TripoSR sampling"
+      - "3D mesh export"
+    
+  - name: "was-node-suite-comfyui"
+    description: "WAS Node Suite - Comprehensive collection of utility nodes"
+    repository: "https://github.com/WASasquatch/was-node-suite-comfyui"
+    version: "latest"
+    features:
+      - "Image processing tools"
+      - "Text manipulation"
+      - "Media handling"
+  
+  - name: "websocket_image_save"
+    description: "Custom image saving node using websockets"
+    type: "script"
+    file: "custom_nodes/websocket_image_save.py"
+
+# Workflow Templates
+workflow_templates:
+  - name: "prompt to 3d.json"
+    description: "Template for generating 3D models from prompts"
+    uses: 
+      - "ComfyUI-Flowty-TripoSR"
+    
+  - name: "workflow_simple.json"
+    description: "Simple image generation workflow"
+    uses:
+      - "DreamShaper model"
+
+# ComfyUI Settings
+comfyui_settings:
+  # Add specific ComfyUI settings here if needed
+  # Example:
+  # preview_method: "auto"
+  # theme: "dark"
+
+# Environment
+environment:
+  python_version: "3.10.16"
+  os: "Linux kaustubh-ubuntu 6.11.0-26-generic"
+  cuda: "True (NVIDIA GeForce RTX 3070)"
+  torch_version: "2.5.1"
+  comfyui_path: "/home/kaustubh/Documents/GitHub/ComfyUI"
+
+# Important Directories
+directories:
+  models: "/home/kaustubh/Documents/GitHub/ComfyUI/models"
+  custom_nodes: "/home/kaustubh/Documents/GitHub/ComfyUI/custom_nodes"
+  user: "/home/kaustubh/Documents/GitHub/ComfyUI/user"
+  output: "/home/kaustubh/Documents/GitHub/ComfyUI/output"
+  input: "/home/kaustubh/Documents/GitHub/ComfyUI/input"
+
+# Additional Notes
+notes:
+  # Add any other important notes about your setup here
+  - "When restoring this setup, make sure to install the 'was-node-suite-comfyui' first as other workflows may depend on it"
+  - "TripoSR requires extra dependencies listed in its README file" 
